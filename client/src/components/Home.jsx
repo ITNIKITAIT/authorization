@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { Context } from "../index";
 import { useContext } from "react";
+import { LOGIN_ROUTE, REGISTRETION_ROUTE } from "../routes/routes";
 
 
 const Home = () => {
@@ -31,8 +32,8 @@ const Home = () => {
                     </div>
                 ) : (
                     <div className="home__auth">
-                        <NavLink to={'/register'}>Register</NavLink>
-                        <NavLink to={'/auth'}>Login</NavLink>
+                        <NavLink to={REGISTRETION_ROUTE}>Register</NavLink>
+                        <NavLink to={LOGIN_ROUTE}>Login</NavLink>
                     </div>
                 )}
             </div>

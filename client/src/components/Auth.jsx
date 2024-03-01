@@ -1,5 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { NavLink } from "react-router-dom";
+import { LOGIN_ROUTE, REGISTRETION_ROUTE } from "../routes/routes";
 
 const Authorization = () => {
 
@@ -40,11 +41,11 @@ const Authorization = () => {
                     <button type="submit" className="submit">Login</button>
                     {isLogin ? (
                         <div className="register">
-                            <span>Don't have an account? <NavLink to="/register">Register</NavLink></span>
+                            <span>Don't have an account? <NavLink to={REGISTRETION_ROUTE}>Register</NavLink></span>
                         </div>
                     ) : (
                         <div className="register">
-                            <span>Already have an account? <NavLink to="/auth">Login</NavLink></span>
+                            <span>Already have an account? <NavLink to={LOGIN_ROUTE}>Login</NavLink></span>
                         </div>
                     )}
                 </form>
