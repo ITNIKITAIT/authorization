@@ -198,7 +198,8 @@ ul {
 }
 
 .input-field:focus ~ .label,
-.input-field:valid .label {
+.input-field:valid .label,
+.input-field:valid ~ .label {
   position: absolute;
   top: -10px;
   left: 20px;

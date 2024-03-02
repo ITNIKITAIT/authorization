@@ -2,9 +2,9 @@ import { NavLink } from "react-router-dom";
 import { Context } from "../index";
 import { useContext } from "react";
 import { LOGIN_ROUTE, REGISTRETION_ROUTE } from "../routes/routes";
+import {observer} from 'mobx-react-lite'
 
-
-const Home = () => {
+const Home = observer(() => {
     const {user} = useContext(Context);
     const exit = () => {
         user.setIsAuth(false)
@@ -39,6 +39,6 @@ const Home = () => {
             </div>
         </div>
      );
-}
+})
  
 export default Home;
